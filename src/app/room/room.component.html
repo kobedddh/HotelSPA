@@ -1,0 +1,13 @@
+<div>
+    <ul class="list-unstyled p-2"> 
+        <li>Room Id: {{room.id}}</li>
+        <li>RoomType Code: {{room.rtCode}}</li>
+        <li>Room Status:
+            <div *ngIf="room.status; else elseBlock">Occupied</div>
+            <ng-template #elseBlock>Vacant</ng-template> </li>
+    </ul>
+
+    <app-service [roomId]="room.id"></app-service>
+
+    
+</div>

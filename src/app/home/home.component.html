@@ -1,0 +1,5 @@
+<ul class="list-unstyled p-2">
+    <li *ngFor="let customer of customers">
+        <a [routerLink]="[ 'customer', customer.id]" class="btn btn-primary m-2">{{customer.cName}}</a>
+    </li>
+</ul>
