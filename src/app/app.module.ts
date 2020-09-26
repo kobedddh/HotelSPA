@@ -22,6 +22,7 @@ import {
   NgbAlertModule
 } from "@ng-bootstrap/ng-bootstrap";
 import { HeaderComponent } from './core/layout/header/header.component';
+import { CustomerCardComponent } from './shared/customer-card/customer-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HeaderComponent } from './core/layout/header/header.component';
     HomeComponent,
     RoomComponent,
     ServiceComponent,
-    HeaderComponent
+    HeaderComponent,
+    CustomerCardComponent
   ],
   imports: [
     BrowserModule,

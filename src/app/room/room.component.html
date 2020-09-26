@@ -1,13 +1,12 @@
-<div>
-    <ul class="list-unstyled p-2"> 
-        <li>Room Id: {{roomId}}</li>
-        <li>RoomType Code: {{room?.rtCode}}</li>
-        <li>Room Status:
-            <div *ngIf="room?.status; else elseBlock">Occupied</div>
-            <ng-template #elseBlock>Vacant</ng-template> </li>
-    </ul>
+<div class="card border-primary m-4" style="max-width: 18rem;">
+    <div class="card-header">Room Id: {{roomId}}</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">RoomType Code: {{room?.rtCode}}</h5>
+      <div>Room Status:
+        <div *ngIf="room?.status; else elseBlock" style="display: inline;">Occupied</div>
+        <ng-template #elseBlock style="display: inline;">Vacant</ng-template></div>
+    </div>
+  </div>
 
-    <app-service [roomId]="room.id"></app-service>
 
-    
-</div>
+  <app-service [roomId]="room.id"></app-service>

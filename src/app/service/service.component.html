@@ -1,9 +1,18 @@
-<ul class="list-unstyled p-2">
-    <li *ngFor="let service of services">
-        <p>Service Id:{{service.id}}</p>
-        <p>Service RoomNo: {{service.roomNo}}</p>
-        <p>Service Description: {{service.sDesc}}</p>
-        <p>Service Amount:{{service.amount}}</p>
-        <p>Service Date: {{service.serviceDate}}</p>
-    </li>
-</ul>
+<table class="table table-striped w-50 ml-4">
+    <thead>
+      <tr>
+        <th scope="col">Service Id</th>
+        <th scope="col">Service Description</th>
+        <th scope="col">Service Amount</th>
+        <th scope="col">Service Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let service of services">
+        <th scope="row">{{service.id}}</th>
+        <td>{{service.sDesc}}</td>
+        <td>{{service.amount}}</td>
+        <td>{{service.serviceDate|date}}</td>
+      </tr>
+    </tbody>
+  </table>

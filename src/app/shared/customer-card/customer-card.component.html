@@ -1,0 +1,11 @@
+
+
+<div class="card" style="width: 18rem; float: left; margin: 1rem;">
+    <div class="card-header">
+      Customer Id: {{customer.id}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{customer.cName}}</h5>
+      <a [routerLink]="[ 'customer', customer.id]" class="btn btn-primary">Room {{customer.roomNo}}</a>
+    </div>
+  </div>
